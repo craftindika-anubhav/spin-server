@@ -10,7 +10,7 @@ export default async function sendMail(emailAdd, subject, content) {
   });
 
   const mailOptions = {
-    from: process.env.ADMIN_MAIL_USER,
+    from: process.env.MAIL_USER,
     to: emailAdd,
     subject: subject,
     html: content,

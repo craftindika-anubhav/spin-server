@@ -15,7 +15,7 @@ router.post('/send-admin', async (req, res) => {
       });
     }
     const data = emailToAdmin(email);
-    await sendMail('noreply@sementy.shop', data.subject, data.content);
+    await sendMail('contact@beautytotalaccess.com', data.subject, data.content);
     const newEmail = new Email({
       email,
     });
