@@ -1,6 +1,6 @@
 export function emailToUser(storeAdd) {
   return {
-    subject: `PARABÉNS! SEU PRESENTE GRATUITO ESTÁ AQUI.`,
+    subject: `Parabéns! Seu colar do zodíaco está aqui.`,
     content: `
     <div>
       <p
