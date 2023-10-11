@@ -1,4 +1,4 @@
-export function emailToUser() {
+export function emailToUser(storeAdd) {
   return {
     subject: `PARABÉNS! SEU PRESENTE GRATUITO ESTÁ AQUI.`,
     content: `
@@ -11,8 +11,7 @@ export function emailToUser() {
           color: #336699;
         "
       >
-        Querido usuário, Obrigado por jogar o jogo. Você ganhou um lindo colar
-        com o seu signo do zodíaco!
+      Querido usuário, Obrigado por visitar o nosso site. Você ganhou um lindo colar com o seu signo do zodíaco!
       </p>
       <p
         style="
@@ -22,9 +21,9 @@ export function emailToUser() {
           color: #336699;
         "
       >
-        Garanta já o seu presente
+      Garanta já o seu, clique aqui
         <a
-          href="https://sementy.store/cart/47062053257528:1?channel=buy_button"
+          href=${storeAdd}
           style="text-decoration: none; color: #ff6600"
           >Clique aqui</a
         >
@@ -32,7 +31,7 @@ export function emailToUser() {
       </p>
       <div style="text-align: center; margin-top: 20px">
         <a
-          href="https://sementy.store/cart/47062053257528:1?channel=buy_button"
+          href=${storeAdd}
           style="
             display: inline-block;
             padding: 10px 20px;

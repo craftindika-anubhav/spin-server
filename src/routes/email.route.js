@@ -35,14 +35,18 @@ router.post('/send-admin', async (req, res) => {
 
 router.post('/send-user', async (req, res) => {
   try {
-    const { email } = req.body;
-    if (!email) {
+    const { email, store } = req.body;
+    if (!email || !store) {
       return res.status(300).json({
         status: 'FAIL',
         message: 'Missing Fields',
       });
     }
-    const data = emailToUser();
+    const storeAdd =
+      parseInt(store) === 0
+        ? 'https://sementy.store/cart/47062053257528:1?channel=buy_button'
+        : 'https://sementy.store/cart/47144286159160:1?channel=buy_button';
+    const data = emailToUser(storeAdd);
     await sendMail(email, data.subject, data.content);
     res.status(200).json({
       response: 'SUCCESS',
